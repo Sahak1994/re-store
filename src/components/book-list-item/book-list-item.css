@@ -21,6 +21,11 @@
     align-items: flex-start;
 }
 
+.book-list-item .book-details .book-title {
+    color: dodgerblue;
+    font-size: 1.2rem;
+}
+
 .book-list-item .book-details .book-author {
     font-size: 1.2rem;
 }
