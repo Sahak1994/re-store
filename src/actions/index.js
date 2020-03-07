@@ -5,7 +5,3 @@ export const booksLoaded = (newBooks) => {
         payload: newBooks,
     }
 }
-
-export {
-    booksLoaded,
-}
