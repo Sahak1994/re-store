@@ -10,13 +10,15 @@ const BookListItem = ({ book, onAddedToCart }) => {
                 <img src={coverImage} alt="cover" />
             </div>
             <div className="book-details">
-                <span href="#" className="book-title">{title}</span>
-                <div className="book-author">{author}</div>
-                <div className="book-price">{price}</div>
-                <button className="btn btn-info add-to-cart"
-                        onClick={onAddedToCart}>Add to cart</button>
+                <span className="book-title">{title}</span>
+                <span className="book-author">{author}</span>
+                <span className="book-price">{price}</span>
+                <button 
+                    className="btn btn-info add-to-cart"
+                    onClick={onAddedToCart}>
+                        Add to cart
+                </button>
             </div>
-           
         </div>
     )
 }

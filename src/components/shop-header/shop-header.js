@@ -7,10 +7,14 @@ const ShopHeader = ({ numItems, total }) => {
 
     return (
         <header className="shop-header row">
-            <Link className="logo text-dark" to="/re-store">ReStore</Link>
-            <Link className="shopping-cart" to="/re-store/cart">
-                <i className="cart-icon fa fa-shopping-cart" />
-                {numItems} items (${total})
+             <Link to="/re-store/home">
+                <div className="logo text-dark">ReStore</div>
+            </Link>
+            <Link to="/re-store/cart">
+                <div className="shopping-cart">
+                    <i className="cart-icon fa fa-shopping-cart" />
+                    {numItems} items (${total})
+                </div>
             </Link>
         </header>
     )
