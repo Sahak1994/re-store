@@ -1,7 +1,5 @@
 const fetchBooksRequest = () => {
-   return {
-      type: 'FETCH_BOOKS_REQUEST'
-   }
+   return 'FETCH_BOOKS_REQUEST'
 }
 
 const fetchBooksSuccess = (newBooks) => {
@@ -13,7 +11,7 @@ const fetchBooksSuccess = (newBooks) => {
 
 const fetchBooksFailure = (error) => {
     return {
-        type: 'FETCH-BOOKS_FAILURE',
+        type: 'FETCH_BOOKS_FAILURE',
         payload: error,
     }
 }
