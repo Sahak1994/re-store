@@ -1,0 +1,12 @@
+.error-indicator {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 10px;
+}
+
+.error-indicator .error-icon {
+   width: 80px;
+   height: 80px;
+}

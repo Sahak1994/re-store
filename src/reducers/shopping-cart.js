@@ -42,6 +42,15 @@ const updateOrderTotal = (cartItems) => {
    return totalSum
 }
 
+const updateCountTotal = (cartItems) => {
+   let totalSum = 0;
+   cartItems.forEach((item) => {
+      totalSum += item.count
+   })
+
+   return totalSum
+}
+
 const updateOrder = (state, payload, quantity) => {
 
    const { bookList: { books }, shoppingCart: { cartItems } } = state;
@@ -53,6 +62,7 @@ const updateOrder = (state, payload, quantity) => {
    const newItem = updateCartItem(book, item, quantity);
    
    return {
+      countTotal: updateCountTotal( updateCartItems(cartItems, newItem, idx) ),
       orderTotal: updateOrderTotal( updateCartItems(cartItems, newItem, idx) ),
       cartItems: updateCartItems(cartItems, newItem, idx)
    }
@@ -62,6 +72,7 @@ const updateShoppingCart = (state, action) => {
 
    if (state === undefined) {
       return {
+         countTotal: 0,
          cartItems: [],
          orderTotal: 0,
       }
